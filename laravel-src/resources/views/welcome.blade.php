@@ -16,11 +16,14 @@
 					<h2>SafeAssist</h2>
 					<p>Where information and safety meet.</p>
 					<ul class="actions">
-						<li>
-							@if (!Auth::check()) <a id="enroll_button" class="button big special">Enroll</a>
-							@else <div class="button big special">Welcome, {!! Auth::user()->email !!} @endif
-						</li>
-						<li><a href="#elements" class="button big alt">Learn More</a></li>
+						@if (!Auth::check())
+						<li><a id="enroll_button" class="button big special">Enroll</a></li>
+						<li><a href="#elements" class="button big alt">Learn More</a></li>	
+						
+						@else 
+						<li><div class="button big special">Search By Name</li>
+						<li><a href="#elements" class="button big alt">Search By Address</a></li>
+						@endif
 					</ul>
 				</div>
 			</section>
